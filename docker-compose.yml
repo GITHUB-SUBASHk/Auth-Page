@@ -8,7 +8,7 @@ services:
       - "8000:8000"
     volumes:
       - ./backend/app:/app/app
-      - sqlite-data:/app/app/db  # Shared volume for SQLite DB
+      - ./backend/app/db:/app/app/db # Shared volume for SQLite DB
     env_file:
       - ./backend/.env
     depends_on:
